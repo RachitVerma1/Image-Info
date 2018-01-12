@@ -12,6 +12,8 @@
 		AADFD9F22007F266001434A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADFD9F02007F266001434A8 /* Main.storyboard */; };
 		AADFD9F42007F266001434A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADFD9F32007F266001434A8 /* Assets.xcassets */; };
 		AADFD9F72007F266001434A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADFD9F52007F266001434A8 /* LaunchScreen.storyboard */; };
+		AADFDA012007F4D0001434A8 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AADFDA002007F4CF001434A8 /* Inceptionv3.mlmodel */; };
+		CBDF629007EBEC6CC0DEC141 /* Pods_Image_Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF1579E69B0BF0C2ADF4731 /* Pods_Image_Info.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		AADFD9F32007F266001434A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AADFD9F62007F266001434A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AADFD9F82007F266001434A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADFDA002007F4CF001434A8 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		CBF1579E69B0BF0C2ADF4731 /* Pods_Image_Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Image_Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D214DBB1E985602C7267A88F /* Pods-Image Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image Info.release.xcconfig"; path = "Pods/Target Support Files/Pods-Image Info/Pods-Image Info.release.xcconfig"; sourceTree = "<group>"; };
+		E957CF9B89212BED0B0B8C6C /* Pods-Image Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Image Info/Pods-Image Info.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDF629007EBEC6CC0DEC141 /* Pods_Image_Info.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BA0D26AA6961C03AD294F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF1579E69B0BF0C2ADF4731 /* Pods_Image_Info.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7620D027982AABA93FEA2BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E957CF9B89212BED0B0B8C6C /* Pods-Image Info.debug.xcconfig */,
+				D214DBB1E985602C7267A88F /* Pods-Image Info.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AADFD9E02007F266001434A8 = {
 			isa = PBXGroup;
 			children = (
 				AADFD9EB2007F266001434A8 /* Image Info */,
 				AADFD9EA2007F266001434A8 /* Products */,
+				7620D027982AABA93FEA2BD0 /* Pods */,
+				4BA0D26AA6961C03AD294F66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				AADFD9F32007F266001434A8 /* Assets.xcassets */,
 				AADFD9F52007F266001434A8 /* LaunchScreen.storyboard */,
 				AADFD9F82007F266001434A8 /* Info.plist */,
+				AADFDA002007F4CF001434A8 /* Inceptionv3.mlmodel */,
 			);
 			path = "Image Info";
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AADFD9FB2007F266001434A8 /* Build configuration list for PBXNativeTarget "Image Info" */;
 			buildPhases = (
+				5D65CEF1E95AE347FA9350E4 /* [CP] Check Pods Manifest.lock */,
 				AADFD9E52007F266001434A8 /* Sources */,
 				AADFD9E62007F266001434A8 /* Frameworks */,
 				AADFD9E72007F266001434A8 /* Resources */,
+				FE502879E8CED545C388B195 /* [CP] Embed Pods Frameworks */,
+				DC3104D1F626448857D34B6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +161,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D65CEF1E95AE347FA9350E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Image Info-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC3104D1F626448857D34B6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Image Info/Pods-Image Info-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE502879E8CED545C388B195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Image Info/Pods-Image Info-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Image Info/Pods-Image Info-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AADFD9E52007F266001434A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AADFD9EF2007F266001434A8 /* ViewController.swift in Sources */,
+				AADFDA012007F4D0001434A8 /* Inceptionv3.mlmodel in Sources */,
 				AADFD9ED2007F266001434A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +363,13 @@
 		};
 		AADFD9FC2007F266001434A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E957CF9B89212BED0B0B8C6C /* Pods-Image Info.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSJKKP4W9U;
 				INFOPLIST_FILE = "Image Info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RachitVerma.Image-Info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +380,13 @@
 		};
 		AADFD9FD2007F266001434A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D214DBB1E985602C7267A88F /* Pods-Image Info.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSJKKP4W9U;
 				INFOPLIST_FILE = "Image Info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RachitVerma.Image-Info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
